@@ -1,0 +1,62 @@
+{
+  "name": "zksync-era-hardhat-example",
+  "description": "An example of how to deploy Solidity contracts to the zkSync Era network using Hardhat.",
+  "version": "1.0.0",
+  "author": " Bence Haromi <bence.haromi@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benceharomi/zksync-era-hardhat-example.git"
+  },
+  "packageManager": "yarn@3.3.1",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test --network zkSyncLocal",
+    "clean": "hardhat clean",
+    "deploy:local": "hardhat deploy-zksync --network zkSyncLocal --script deploy",
+    "deploy:era": "hardhat deploy-zksync --network zkSyncEra --script deploy",
+    "script:local": "hardhat deploy-zksync --network zkSyncLocal --script",
+    "script:era": "hardhat deploy-zksync --network zkSyncEra --script",
+    "verify:era": "hardhat verify --network zkSyncEra",
+    "postinstall": "patch-package"
+  },
+  "devDependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/address": "^5.7.0",
+    "@ethersproject/hash": "^5.7.0",
+    "@ethersproject/web": "^5.7.1",
+    "@matterlabs/hardhat-zksync-chai-matchers": "^0.1.2",
+    "@matterlabs/hardhat-zksync-deploy": "^0.6.3",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.16",
+    "@matterlabs/hardhat-zksync-toolbox": "^0.1.1",
+    "@matterlabs/hardhat-zksync-verify": "^0.1.5",
+    "@matterlabs/hardhat-zksync-vyper": "^0.1.8",
+    "@matterlabs/signature-checker": "^1.1.1",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.2",
+    "@nomiclabs/hardhat-vyper": "^3.0.3",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.14.0",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.14.0",
+    "mocha": "^10.2.0",
+    "ordinal": "^1.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "zksync-web3": "^0.14.3"
+  },
+  "dependencies": {
+    "@matterlabs/signature-checker": "^1.1.1",
+    "@openzeppelin/contracts": "^3.4.0",
+    "@openzeppelin/contracts-4.8": "npm:@openzeppelin/contracts@^4.9.2",
+    "@uniswap/lib": "^4.0.1-alpha",
+    "@uniswap/v2-core": "^1.0.1",
+    "patch-package": "^7.0.2"
+  }
+}
